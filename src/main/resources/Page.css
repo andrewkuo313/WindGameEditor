@@ -1,0 +1,225 @@
+/* Global Settings */
+.GlobalLabelDescription
+{
+	-fx-text-fill: linear-gradient(to bottom, #2B2B2B, #878787);
+	-fx-font-size: 20px;
+	-fx-font-weight: bold;
+}
+
+.GlobalLabelContent
+{
+	-fx-text-fill: linear-gradient(to bottom, #2B2B2B, #878787);
+	-fx-font-size: 16px;
+}
+
+/*https://stackoverflow.com/questions/40753613/javafx-button-with-svg*/
+.GlobalEditButton
+{
+	-fx-opacity: 50%;
+	-icon-paint: #000000;
+    -fx-background-color: -icon-paint;
+    -size: 16px;
+    -fx-min-height: -size;
+    -fx-min-width: -size;
+    -fx-max-height: -size;
+    -fx-max-width: -size;
+	-fx-shape: "M328.883,89.125l107.59,107.589l-272.34,272.34L56.604,361.465L328.883,89.125z M518.113,63.177l-47.981-47.981
+		c-18.543-18.543-48.653-18.543-67.259,0l-45.961,45.961l107.59,107.59l53.611-53.611
+		C532.495,100.753,532.495,77.559,518.113,63.177z M0.3,512.69c-1.958,8.812,5.998,16.708,14.811,14.565l119.891-29.069
+		L27.473,390.597L0.3,512.69z";
+}
+
+.GlobalEditButton:hover
+{
+	-fx-opacity: 65%;
+}
+
+.GlobalEditButton:pressed
+{
+	-fx-opacity: 80%;
+}	
+
+.GlobalNormalButton
+{
+	-fx-border-color: linear-gradient(to bottom, #828282, #4F4F4F);
+	-fx-background-radius: 10px;
+	-fx-background-color: #FFFFFF;
+	-fx-border-radius: 10px;
+	-fx-border-width: 1px;
+	-fx-text-fill: linear-gradient(to bottom, #2B2B2B, #878787);
+	-fx-font-size: 15px;
+	-fx-font-weight: bold;
+	-fx-padding: 5;
+}
+
+.GlobalNormalButton:hover
+{
+	-fx-border-color: linear-gradient(to bottom, #757575, #424242);
+	-fx-text-fill: linear-gradient(to bottom, #1F1F1F, #7A7A7A);
+	-fx-background-color: #F7F7F7;
+}
+
+.GlobalNormalButton:pressed
+{
+	-fx-border-color: linear-gradient(to bottom, #238E9E, #165963);
+	-fx-text-fill: linear-gradient(to bottom, #0C3238, #1E7B8A);
+	-fx-background-color: #F0F0F0;
+}
+
+
+.GlobalEditTextField
+{
+	-fx-background-color: #FFFFFF;
+	-fx-border-width: 0 0 2px 0;
+	-fx-border-color: #8C8C8C;
+	-fx-font-size: 16px;
+}
+
+/* MainPage */
+.MainPageBorderPane
+{
+	-fx-background-color: #FFFFFF;
+}
+
+.MainPageMenu
+{
+	-fx-border-width: 0 4 0 0;
+	-fx-border-color: linear-gradient(to right, #999999, #FFFFFF);
+}
+
+.MainPageButton
+{
+	
+	-fx-background-color: #FFFFFF;
+	-fx-border-width: 0 0 0 9;
+	-fx-border-color: transparent transparent transparent linear-gradient(to bottom, #7D7D7D, #696969);	
+	
+	-fx-text-fill: linear-gradient(to bottom, #333333, #999999);
+	-fx-font-size: 15px;
+	-fx-font-weight: bold;
+	
+	-fx-alignment: baseline-left;
+}
+
+.MainPageButton:hover
+{
+	/*-fx-border-color: transparent transparent transparent linear-gradient(to bottom, #2CB2C7, #1F7E8C);	*/
+	-fx-border-color: transparent transparent transparent linear-gradient(to bottom, #707070, #5C5C5C);	
+	-fx-background-color: #F7F7F7;
+	-fx-text-fill: linear-gradient(to bottom, #262626, #8C8C8C);
+}
+
+.MainPageButton:pressed
+{	
+	-fx-background-color: #F0F0F0;
+	-fx-text-fill: linear-gradient(to bottom, #1A1A1A, #808080);
+	/*seems didn't work*/
+}
+
+.MainPageButton:focused
+{
+	-fx-border-color: transparent transparent transparent linear-gradient(to bottom, #2CB2C7, #1F7E8C);	
+	-fx-text-fill: linear-gradient(to bottom, #0C3238, #1E7B8A);
+}
+
+/* FilePage */
+.FilePageAnchorPane
+{
+	-fx-background-color: #FFFFFF;
+	
+}
+
+.FilePageGrid
+{
+	-fx-border-color: linear-gradient(to bottom, #828282, #4F4F4F);
+	-fx-background-radius: 20px;
+	-fx-border-radius: 20px;
+	-fx-border-width: 2px;
+}
+
+.FilePageGrid:hover
+{
+	-fx-border-color: linear-gradient(to bottom, #757575, #424242);
+	-fx-background-color: #F7F7F7;
+}
+
+.FilePageGrid:pressed
+{
+	-fx-border-color: linear-gradient(to bottom, #238E9E, #165963);
+	-fx-background-color: #F0F0F0;
+}
+
+.FilePageLabel
+{
+	-fx-text-fill: linear-gradient(to bottom, #2B2B2B, #878787);
+	-fx-font-size: 23px;
+	-fx-font-weight: bold;
+}
+
+.FilePageIcon
+{
+	-fx-scale-x: 1;
+	-fx-scale-y: 1;
+}
+
+.FilePageIcon:hover
+{
+	-fx-scale-x: 1.14;
+	-fx-scale-y: 1.14;
+}
+
+.FilePageIcon:pressed
+{
+	-fx-scale-x: 0.94;
+	-fx-scale-y: 0.94;	
+}
+
+/* GamePage */
+.GamePageAnchorPane
+{
+	-fx-background-color: #FFFFFF;
+}
+
+/* TaskPage */
+.TaskPageAnchorPane
+{
+	-fx-background-color: #FFFFFF;
+}
+
+.TaskPageChoiceBox
+{
+	-fx-background-color: #FFFFFF;
+	
+}
+
+.TaskPageChoiceBox .label
+{
+	-fx-text-fill: linear-gradient(to bottom, #2B2B2B, #878787);
+	-fx-font-size: 16px;
+	-fx-padding: 0 10 0 0;
+}
+
+.TaskPageChoiceBox .menu-item:hover > .label
+{
+    -fx-text-fill: #FFFFFF;
+}
+
+.TaskPageChoiceBox .menu-item:focused > .label
+{
+    -fx-text-fill: #FFFFFF;
+}
+
+/* PosPage */
+.PosPageBorderPane
+{
+	-fx-background-color: #FFFFFF;
+}
+
+/* ItemPage */
+.ItemPageBorderPane
+{
+	-fx-background-color: #FFFFFF;
+}
+
+
+

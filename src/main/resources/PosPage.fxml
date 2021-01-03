@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.web.WebView?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" styleClass="PosPageBorderPane" stylesheets="@Page.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gmail.andrewchouhs.controller.PosPageController">
+   <center>
+      <WebView fx:id="webView" prefHeight="768.0" prefWidth="1024.0" BorderPane.alignment="CENTER" />
+   </center>
+   <bottom>
+      <HBox alignment="BOTTOM_RIGHT" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onMouseClicked="#confirm" styleClass="GlobalNormalButton" text="確認" />
+            <Button mnemonicParsing="false" onMouseClicked="#cancel" styleClass="GlobalNormalButton" text="取消" />
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets bottom="8.0" right="8.0" top="8.0" />
+         </padding>
+      </HBox>
+   </bottom>
+</BorderPane>

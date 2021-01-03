@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane onMouseClicked="#defocusAllComponent" prefHeight="600.0" prefWidth="700.0" styleClass="TaskPageAnchorPane" stylesheets="@Page.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gmail.andrewchouhs.controller.TaskPageController">
+   <children>
+      <BorderPane AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="20.0">
+         <left>
+            <ListView fx:id="taskListView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+         </left>
+         <center>
+            <VBox alignment="CENTER" spacing="5.0" BorderPane.alignment="TOP_CENTER">
+               <children>
+                  <VBox spacing="5.0">
+                     <children>
+                        <Label styleClass="GlobalLabelDescription" text="任務名稱" />
+                        <HBox alignment="CENTER_LEFT" onMouseEntered="#nameOnMouseEnter" onMouseExited="#nameOnMouseExited">
+                           <children>
+                              <TextField fx:id="nameTextField" minWidth="0.0" onAction="#defocusAllComponent" prefWidth="0.0" styleClass="GlobalEditTextField" />
+                              <Label fx:id="nameLabel" styleClass="GlobalLabelContent" />
+                              <Button fx:id="nameButton" mnemonicParsing="false" onMouseClicked="#nameOnMouseClicked" styleClass="GlobalEditButton" text="Button" visible="false">
+                                 <HBox.margin>
+                                    <Insets left="9.0" />
+                                 </HBox.margin></Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox spacing="5.0">
+                     <children>
+                        <Label styleClass="GlobalLabelDescription" text="提示 / 任務說明" />
+                        <HBox alignment="CENTER_LEFT" onMouseEntered="#descriptionOnMouseEnter" onMouseExited="#descriptionOnMouseExited">
+                           <children>
+                              <TextField fx:id="descriptionTextField" minWidth="0.0" onAction="#defocusAllComponent" prefWidth="0.0" styleClass="GlobalEditTextField" />
+                              <Label fx:id="descriptionLabel" styleClass="GlobalLabelContent" />
+                              <Button fx:id="descriptionButton" mnemonicParsing="false" onMouseClicked="#descriptionOnMouseClicked" styleClass="GlobalEditButton" text="Button" visible="false">
+                                 <HBox.margin>
+                                    <Insets left="9.0" />
+                                 </HBox.margin></Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox spacing="5.0">
+                     <children>
+                        <Label styleClass="GlobalLabelDescription" text="目的地" />
+                        <HBox alignment="CENTER_LEFT" onMouseEntered="#posOnMouseEnter" onMouseExited="#posOnMouseExited">
+                           <children>
+                              <TextField minWidth="0.0" prefWidth="0.0" styleClass="GlobalEditTextField" />
+                              <Label fx:id="posLabel" styleClass="GlobalLabelContent" />
+                              <Button fx:id="posButton" mnemonicParsing="false" onMouseClicked="#posOnMouseClicked" styleClass="GlobalEditButton" text="Button" visible="false">
+                                 <HBox.margin>
+                                    <Insets left="9.0" />
+                                 </HBox.margin></Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox spacing="10.0">
+                     <children>
+                        <Label styleClass="GlobalLabelDescription" text="前置條件" />
+                        <ListView fx:id="postConditionListView" prefHeight="200.0" prefWidth="200.0" />
+                        <HBox alignment="CENTER_LEFT" spacing="10.0">
+                           <children>
+                              <ChoiceBox fx:id="postConditionChoiceBox" styleClass="TaskPageChoiceBox" />
+                              <Button mnemonicParsing="false" onMouseClicked="#addPostCondition" styleClass="GlobalNormalButton" text="新增" />
+                              <Button mnemonicParsing="false" onMouseClicked="#removePostCondition" styleClass="GlobalNormalButton" text="刪除" />
+                           </children>
+                        </HBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" />
+                     </padding></VBox>
+                  <VBox spacing="4.0">
+                     <children>
+                        <Label styleClass="GlobalLabelDescription" text="任務達成條件" />
+                        <HBox alignment="CENTER_LEFT" onMouseEntered="#conditionOnMouseEnter" onMouseExited="#conditionOnMouseExited">
+                           <children>
+                              <TextField minWidth="0.0" prefWidth="0.0" styleClass="GlobalEditTextField" />
+                              <ChoiceBox fx:id="conditionChoiceBox" styleClass="TaskPageChoiceBox" />
+                              <Button fx:id="conditionButton" mnemonicParsing="false" onMouseClicked="#conditionOnMouseClicked" styleClass="GlobalEditButton" text="Button" visible="false">
+                                 <HBox.margin>
+                                    <Insets left="9.0" />
+                                 </HBox.margin></Button>
+                           </children>
+                        </HBox>
+                     </children></VBox>
+                  <VBox spacing="5.0">
+                     <children>
+                        <Label styleClass="GlobalLabelDescription" text="獎勵" />
+                        <HBox alignment="CENTER_LEFT" onMouseEntered="#rewardOnMouseEnter" onMouseExited="#rewardOnMouseExited">
+                           <children>
+                              <TextField minWidth="0.0" prefWidth="0.0" styleClass="GlobalEditTextField" />
+                              <Label fx:id="rewardLabel" styleClass="GlobalLabelContent" />
+                              <Button fx:id="rewardButton" mnemonicParsing="false" onMouseClicked="#rewardOnMouseClicked" styleClass="GlobalEditButton" text="Button" visible="false">
+                                 <HBox.margin>
+                                    <Insets left="9.0" />
+                                 </HBox.margin></Button>
+                           </children>
+                        </HBox>
+                     </children></VBox>
+                  <HBox alignment="CENTER_RIGHT" spacing="10.0">
+                     <children>
+                        <Button mnemonicParsing="false" onMouseClicked="#createTask" styleClass="GlobalNormalButton" text="新增" />
+                        <Button mnemonicParsing="false" onMouseClicked="#deleteTask" styleClass="GlobalNormalButton" text="刪除" />
+                     </children>
+                  </HBox>
+               </children>
+               <BorderPane.margin>
+                  <Insets left="30.0" />
+               </BorderPane.margin>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

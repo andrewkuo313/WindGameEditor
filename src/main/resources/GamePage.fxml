@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane onMouseClicked="#defocusAllComponent" prefHeight="600.0" prefWidth="700.0" styleClass="GamePageAnchorPane" stylesheets="@Page.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gmail.andrewchouhs.controller.GamePageController">
+   <children>
+      <VBox alignment="TOP_CENTER" spacing="30.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="20.0">
+         <children>
+            <VBox spacing="15.0">
+               <children>
+                  <Label styleClass="GlobalLabelDescription" text="遊戲名稱" />
+                  <HBox alignment="CENTER_LEFT" onMouseEntered="#nameOnMouseEnter" onMouseExited="#nameOnMouseExited">
+                     <children>
+                        <TextField fx:id="nameTextField" minWidth="0.0" onAction="#defocusAllComponent" prefWidth="0.0" styleClass="GlobalEditTextField" visible="false" />
+                        <Label fx:id="nameLabel" styleClass="GlobalLabelContent" />
+                        <Button fx:id="nameButton" mnemonicParsing="false" onMouseClicked="#nameOnMouseClicked" styleClass="GlobalEditButton" visible="false">
+                           <HBox.margin>
+                              <Insets left="9.0" />
+                           </HBox.margin></Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox spacing="15.0">
+               <children>
+                  <Label styleClass="GlobalLabelDescription" text="邀請碼" />
+                  <HBox alignment="CENTER_LEFT" onMouseEntered="#gamePinOnMouseEnter" onMouseExited="#gamePinOnMouseExited">
+                     <children>
+                        <TextField fx:id="gamePinTextField" minWidth="0.0" onAction="#defocusAllComponent" prefWidth="0.0" styleClass="GlobalEditTextField" visible="false" />
+                        <Label fx:id="gamePinLabel" styleClass="GlobalLabelContent" />
+                        <Button fx:id="gamePinButton" mnemonicParsing="false" onMouseClicked="#gamePinOnMouseClicked" styleClass="GlobalEditButton" text="Button" visible="false">
+                           <HBox.margin>
+                              <Insets left="9.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <Button mnemonicParsing="false" onMouseClicked="#randomGamePin" styleClass="GlobalNormalButton" text="隨機產生" />
+               </children>
+            </VBox>
+            <VBox spacing="15.0">
+               <children>
+                  <Label styleClass="GlobalLabelDescription" text="人數限制" />
+                  <HBox alignment="CENTER_LEFT" onMouseEntered="#playerLimitOnMouseEnter" onMouseExited="#playerLimitOnMouseExited">
+                     <children>
+                        <TextField fx:id="playerLimitTextField" minWidth="0.0" onAction="#defocusAllComponent" prefWidth="0.0" styleClass="GlobalEditTextField" visible="false" />
+                        <Label fx:id="playerLimitLabel" styleClass="GlobalLabelContent" />
+                        <Button fx:id="playerLimitButton" mnemonicParsing="false" onMouseClicked="#playerLimitOnMouseClicked" styleClass="GlobalEditButton" text="Button" visible="false">
+                           <HBox.margin>
+                              <Insets left="9.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox spacing="15.0">
+               <children>
+                  <Label styleClass="GlobalLabelDescription" text="時間限制" />
+                  <HBox alignment="CENTER_LEFT" onMouseEntered="#timeLimitOnMouseEnter" onMouseExited="#timeLimitOnMouseExited">
+                     <children>
+                        <TextField fx:id="timeLimitTextField" minWidth="0.0" onAction="#defocusAllComponent" prefWidth="0.0" styleClass="GlobalEditTextField" visible="false" />
+                        <Label fx:id="timeLimitLabel" styleClass="GlobalLabelContent" />
+                        <Button fx:id="timeLimitButton" mnemonicParsing="false" onMouseClicked="#timeLimitOnMouseClicked" styleClass="GlobalEditButton" text="Button" visible="false">
+                           <HBox.margin>
+                              <Insets left="9.0" />
+                           </HBox.margin></Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox spacing="15.0">
+               <children>
+                  <Label styleClass="GlobalLabelDescription" text="過關條件" />
+                  <HBox alignment="CENTER_LEFT" onMouseEntered="#requirementOnMouseEnter" onMouseExited="#requirementOnMouseExited">
+                     <children>
+                        <Label fx:id="requirementLabel" styleClass="GlobalLabelContent" />
+                        <Button fx:id="requirementButton" mnemonicParsing="false" onMouseClicked="#requirementOnMouseClicked" styleClass="GlobalEditButton" text="Button" visible="false">
+                           <HBox.margin>
+                              <Insets left="9.0" />
+                           </HBox.margin></Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
